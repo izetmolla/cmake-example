@@ -5,7 +5,7 @@ RUN apt update && apt upgrade -y
 RUN apt-get install --reinstall ca-certificates -y
 
 # install developer dependencies
-RUN apt-get install -y git build-essential libboost-all-dev cmake zip unzip sudo pkg-config wget --no-install-recommends
+RUN apt-get install -y git build-essential libboost-all-dev cmake zip unzip sudo pkg-config wget curl tar
 RUN wget -O vcpkg.tar.gz https://github.com/microsoft/vcpkg/archive/master.tar.gz
 RUN sudo mkdir /opt/vcpkg
 RUN sudo tar xf vcpkg.tar.gz --strip-components=1 -C /opt/vcpkg
